@@ -8,6 +8,7 @@ merge:
     labels: ["do not merge"]
   method: squash
   options:
+    allow_merge_with_no_checks: true
     squash:
       body: pull_request_body
       message_delimiter: ==COMMIT_MSG==
