@@ -5,4 +5,4 @@ policy:
 approval_rules:
 - name: no approval necessary
   requires:
-    count: 0
+    count: 1
