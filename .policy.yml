@@ -17,3 +17,7 @@ approval_rules:
       # "count" is the number of required approvals. The default is 0, meaning no
       # approval is necessary.
       count: 1
+    options:
+      request_review:
+        enabled: true
+        mode: all-users|random-users|teams
