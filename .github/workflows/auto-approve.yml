@@ -24,4 +24,4 @@ ownership_rules:
       # The name of the rules that is used mainly for logging.
     - name: "Default playground rule for prototyping."
       # The directory that certain user with {{username}} owns.
-      path: "**/*"
+      path: "**"
