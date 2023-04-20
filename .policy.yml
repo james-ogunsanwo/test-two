@@ -20,4 +20,3 @@ approval_rules:
     options:
       request_review:
         enabled: true
-        mode: all-users|random-users|teams
