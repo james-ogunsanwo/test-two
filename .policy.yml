@@ -2,7 +2,12 @@
 
 policy:
   approval:
-  - no approval necessary
+    - or:
+      - no approval necessary
 
 approval_rules:
-- name: no approval necessary
+  - name: no approval necessary
+    options:
+      allow_contributor: false
+    requires:
+      count: 0
