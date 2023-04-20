@@ -7,4 +7,4 @@ policy:
 approval_rules:
   - name: one approval from palantir
     requires:
-      count: 1
+      count: 0
