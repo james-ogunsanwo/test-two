@@ -5,4 +5,6 @@ policy:
   - no approval necessary!!!
 
 approval_rules:
-- name: no approval necessary
+  - name: one approval from palantir
+    requires:
+      count: 1
