@@ -13,3 +13,7 @@ approval_rules:
         pattern: "^(master|main)$"
       from_branch:
         pattern: "^(feature/deploy)$"
+    requires:
+      # "count" is the number of required approvals. The default is 0, meaning no
+      # approval is necessary.
+      count: 1
