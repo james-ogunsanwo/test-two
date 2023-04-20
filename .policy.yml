@@ -1,8 +1,7 @@
 # the high level policy
 policy:
-  approval:
-    - or:
-        - one
+  approval: 
+    - one
 
 # the list of rules
 approval_rules:
