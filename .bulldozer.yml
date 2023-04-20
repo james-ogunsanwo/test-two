@@ -1,18 +1,36 @@
-# Excavator auto-updates this file. Please contribute improvements to the central template.
-
+# "version" is the configuration version, currently "1".
 version: 1
+
 merge:
   trigger:
     labels: ["merge when ready"]
+    auto_merge: true
+
   ignore:
     labels: ["do not merge"]
+    comment_substrings: ["==DO_NOT_MERGE=="]
   method: squash
+
+  branch_method:
+    develop: squash
+    master: merge
+  merge_method:
+    - method: squash
+      trigger:
+        max_commits: 3
   options:
-    allow_merge_with_no_checks: true
     squash:
-      body: pull_request_body
-      message_delimiter: ==COMMIT_MSG==
+      title: "pull_request_title"
+      body: "empty_body"
   delete_after_merge: true
+  allow_merge_with_no_checks: true
+
 update:
   trigger:
-    labels: ["update me"]
+    labels: ["WIP", "Update Me"]
+  ignore:
+    labels: ["Do Not Update"]
+  ignore_drafts: false
+
+  required_statuses:
+    - "policy-bot: develop"
