@@ -7,16 +7,17 @@ policy:
 # the list of rules
 approval_rules:
   - name: one
-    targets_branch:
-      pattern: "^(master|main)$"
-    from_branch:
-      pattern: "^(feature/deploy)$"
-    methods:
-      # Just like the "comment_patterns" and "github_review_comment_patterns" option, but
-      # for the PR Body description. If a PR body contains a string in this list, it counts as approval. Use
-      # the "body_patterns" option if you want to match strings.
-      body_patterns:
-        - "deploy"
+    if:
+      targets_branch:
+        pattern: "^(master|main)$"
+      from_branch:
+        pattern: "^(feature/deploy)$"
+      methods:
+        # Just like the "comment_patterns" and "github_review_comment_patterns" option, but
+        # for the PR Body description. If a PR body contains a string in this list, it counts as approval. Use
+        # the "body_patterns" option if you want to match strings.
+        body_patterns:
+          - "deploy"
 
   - name: only staging files have changed
     if:
