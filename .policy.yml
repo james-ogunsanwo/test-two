@@ -2,7 +2,7 @@
 
 policy:
   approval:
-  - no approval necessary!!!
+  - no approval necessary
 
 approval_rules:
   - name: one approval from palantir
