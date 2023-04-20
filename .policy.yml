@@ -1,18 +1,6 @@
-# the high level policy
 policy:
-  approval: 
-    - one
+  approval:
+  - no approval necessary
 
-# the list of rules
 approval_rules:
-  - name: one
-    description: this is a dummy
-    if:
-      targets_branch:
-        pattern: "^(master|main)$"
-      from_branch:
-        pattern: "^(feature/deploy)$"
-    requires:
-      # "count" is the number of required approvals. The default is 0, meaning no
-      # approval is necessary.
-      count: 1
+- name: no approval necessary
