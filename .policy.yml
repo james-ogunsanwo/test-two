@@ -1,8 +1,14 @@
 policy:
   approval:
-  - no approval necessary
+  - default 
+  - updating test folder
 
 approval_rules:
-- name: no approval necessary
+- name: default
+- name: updating test folder
+  if:
+        only_changed_files:
+          paths:
+            - "test/.*"
   requires:
     count: 1
