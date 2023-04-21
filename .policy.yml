@@ -7,6 +7,6 @@ approval_rules:
   if:
       only_changed_files:
         paths:
-        - '^staging\.palantir\.com/.*'
+        - '^test/.*'
   requires:
-    count: 1
+    count: 2
