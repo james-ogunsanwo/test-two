@@ -27,10 +27,7 @@ merge:
 
 update:
   trigger:
-    labels: ["WIP", "Update Me"]
+    labels: ["Update Me"]
   ignore:
     labels: ["Do Not Update"]
-  ignore_drafts: false
-
-  required_statuses:
-    - "policy-bot: develop"
+  ignore_drafts: true
