@@ -4,5 +4,9 @@ policy:
 
 approval_rules:
 - name: no approval necessary
+  if:
+      only_changed_files:
+        paths:
+        - '^staging\.palantir\.com/.*'
   requires:
     count: 1
