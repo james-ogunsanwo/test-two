@@ -12,3 +12,4 @@ approval_rules:
         - "test/demo.txt"
   requires:
     count: 1
+    users: ["approveman"]
