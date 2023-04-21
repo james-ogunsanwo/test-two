@@ -7,8 +7,8 @@ approval_rules:
 - name: default
 - name: updating test folder
   if:
-        only_changed_files:
-          paths:
-            - "test/.*"
+    only_changed_files:
+      paths:
+        - "test/.*"
   requires:
     count: 1
