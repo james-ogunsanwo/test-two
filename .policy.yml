@@ -9,4 +9,4 @@ approval_rules:
         paths:
         - '^test/.*'
   requires:
-    count: 2
+    count: 1
