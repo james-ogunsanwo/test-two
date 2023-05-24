@@ -12,7 +12,5 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
-      - run: echo ${{ github.head_ref }}
-        shell: bash
       - run: sleep 10000
         shell: bash
