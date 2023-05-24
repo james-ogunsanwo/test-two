@@ -1,5 +1,9 @@
 name: Test
 
+concurrency:
+  group: deployment
+  cancel-in-progress: true
+
 on:
   push:
   workflow_dispatch:
@@ -7,9 +11,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    concurrency:
-      group: deployment
-      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
       - run: sleep 10000
